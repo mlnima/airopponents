@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MapController from './components/MapController';
+import styled from 'styled-components';
+const AppContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+`;
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AppContainer>
+        <header>
+          <h1>GeoJSON Map Viewer</h1>
+        </header>
+        <MapController />
+      </AppContainer>
   );
 }
 
 export default App;
+
